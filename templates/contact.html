@@ -1,0 +1,52 @@
+{% extends 'master2.html' %}
+{% block mycontent  %}
+
+<html>
+<div class="post">
+				<h2 class="title"><a href="#">Contact US </a></h2>
+								<div style="clear: both;">&nbsp;</div>
+				<div class="entry">
+<body>
+ <form method="post" action="/Contactformprocess">
+	 {% csrf_token %}
+  <table>
+   <tr>
+    <td>First Name :</td>
+    <td><input type="text" name="txt1"></td>
+   </tr>
+   <tr>
+	   <td>Middle Name:</td>
+	   <td><input type="text" name="txt2"></td>
+   </tr>
+	<tr>
+		<td>Last Name:</td>
+		<td><input type="text" name="txt3"></td>
+	</tr>
+   <tr>
+    <td>Gender :</td>
+    <td>
+     <input type="text" name="Gender">
+    </td>
+   </tr>
+   <tr>
+    <td>Email :</td>
+    <td><input type="email" name="txt4"></td>
+   </tr>
+   <tr>
+    <td>Phone no :</td>
+    <td>
+     <input type="phone" name="txt5">
+    </td>
+   </tr>
+   <tr>
+    <td><input type="submit" value="Submit"></td>
+   </tr>
+  </table>
+ </form>
+</body>
+     </div>
+	</div>
+
+
+</html>
+{% endblock %}
